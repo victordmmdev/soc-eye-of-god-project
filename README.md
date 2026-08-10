@@ -86,7 +86,7 @@ O painel está disponível somente na máquina local por padrão e organiza a an
 | Componentes | Responsabilidade, funcionamento e melhoria pendente de cada módulo. |
 | Versões | Entregas `0.1.0` e `1.0.1`, com contexto de cada edição. |
 
-<img width="1911" height="1073" alt="Captura de tela de 2026-08-10 07-03-01" src="https://github.com/user-attachments/assets/0cb0ec24-4a21-42ff-b6a6-38455938f9a9" />
+
 ## Começar
 
 ### Pré-requisitos
@@ -141,6 +141,7 @@ minisiem-web
 ```
 
 O estado atual possui **8 testes automatizados** cobrindo contratos de evento, parser, regra de detecção e renderização/escape do painel. A validação funcional do exemplo confirma **4 eventos normalizados** e **1 alerta AUTH-001**.
+<img width="1911" height="1073" alt="Captura de tela de 2026-08-10 07-20-23" src="https://github.com/user-attachments/assets/8b2c7cff-f091-4b62-a3a2-df074b11121e" />
 
 ## Segurança e escopo
 
