@@ -4,6 +4,7 @@
   <strong>Mini-SIEM educacional para investigação de eventos de autenticação SSH.</strong><br>
   Ingestão de logs Linux · Normalização · SQLite · Detecção de falhas repetidas · Console técnico local
 </p>
+<img width="1911" height="1073" alt="Captura de tela de 2026-08-10 07-03-01" src="https://github.com/user-attachments/assets/d2a0b45f-8858-4d1d-81d2-d8792ab455dc" />
 
 <p align="center">
   <a href="#visão-geral">Visão geral</a> ·
@@ -13,6 +14,8 @@
   <a href="#qualidade-e-validação">Validação</a> ·
   <a href="#roadmap">Roadmap</a>
 </p>
+
+<img width="1911" height="1073" alt="Captura de tela de 2026-08-10 07-03-01" src="https://github.com/user-attachments/assets/77785ac6-4a42-473b-93a4-d2d99e49432d" />
 
 > **Versão atual:** `1.0.1` · **Status:** laboratório educacional / portfólio · **Licença:** ainda não definida
 
@@ -84,8 +87,7 @@ O painel está disponível somente na máquina local por padrão e organiza a an
 | Componentes | Responsabilidade, funcionamento e melhoria pendente de cada módulo. |
 | Versões | Entregas `0.1.0` e `1.0.1`, com contexto de cada edição. |
 
-Quando os prints do painel estiverem versionados, coloque-os em `docs/assets/` e inclua-os nesta seção com caminhos relativos. Assim, eles serão exibidos corretamente no GitHub e permanecerão vinculados à versão do código que representam.
-
+<img width="1911" height="1073" alt="Captura de tela de 2026-08-10 07-03-01" src="https://github.com/user-attachments/assets/0cb0ec24-4a21-42ff-b6a6-38455938f9a9" />
 ## Começar
 
 ### Pré-requisitos
