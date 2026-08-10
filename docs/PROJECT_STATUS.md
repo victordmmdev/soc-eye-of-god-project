@@ -120,9 +120,6 @@ Estas são limitações reais do estado atual, em ordem aproximada de impacto.
 3. Criar regras adicionais, por exemplo login de sucesso após falhas repetidas e acesso fora de horário.
 4. Evoluir o painel para histórico temporal, filtros, detalhes de evento e investigação de alerta.
 
-## Organização do trabalho no GitHub
-
-Para cada item do Marco 1, criar uma issue com: contexto, comportamento atual, resultado esperado, critérios de aceite, arquivos afetados e testes planejados. Desenvolver em uma branch por issue, validar localmente, atualizar este documento e o diário de desenvolvimento e então abrir um pull request.
 
 ## Como continuar localmente
 
