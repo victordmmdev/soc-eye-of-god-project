@@ -121,14 +121,6 @@ Estas são limitações reais do estado atual, em ordem aproximada de impacto.
 4. Evoluir o painel para histórico temporal, filtros, detalhes de evento e investigação de alerta.
 
 
-## Como continuar localmente
-
-```bash
-# executar testes
-python -m pytest
-
-# testar o pipeline sem reutilizar o banco padrão
-PYTHONPATH=src python -m minisiem.cli data/samples/auth.log --year 2026 --database /tmp/minisiem.db
 
 # iniciar o painel
 PYTHONPATH=src python -m minisiem.web
