@@ -40,8 +40,8 @@ LinuxLogFileReader ──► LinuxAuthParser ──► Event
 | Armazenamento | `src/minisiem/storage/sqlite.py` | Schema e repositório SQLite de eventos | Funcional, precisa evoluir |
 | Detecção | `src/minisiem/detection/failed_auth.py` | Regra `AUTH-001` | Funcional, sem recorrência por janela |
 | CLI | `src/minisiem/cli.py` | Execução de ponta a ponta no terminal | Funcional |
-| Web | `src/minisiem/web.py` | Dashboard local em `127.0.0.1` | Funcional, sem testes unitários próprios |
-| Testes | `tests/unit/` | Contratos de evento, parser e regra | 6 testes |
+| Web | `src/minisiem/web.py` | Console técnico local em `127.0.0.1` | Funcional, com navegação e busca local |
+| Testes | `tests/unit/` | Contratos de evento, parser, regra e painel | 8 testes |
 | Dados | `data/samples/auth.log` | Log SSH de demonstração | 4 eventos reconhecidos |
 | Documentação | `README.md` | Início rápido e execução | Atualizado |
 | Documentação | `docs/DEVELOPMENT_LOG.md` | Diário de decisões e entregas | Atualizado |
@@ -64,7 +64,7 @@ Aceita arquivo de log, caminho do banco, limiar, janela de correlação e ano. A
 PYTHONPATH=src python -m minisiem.web
 ```
 
-Disponível em `http://127.0.0.1:8000`. O painel utiliza somente a biblioteca padrão do Python, aceita o log de exemplo permitido, mostra configuração, métricas, distribuição, postura de risco, alertas e eventos recentes. A interface escuta somente no loopback por padrão; não deve ser exposta à rede sem autenticação e revisão de segurança.
+Disponível em `http://127.0.0.1:8000`. O painel utiliza somente a biblioteca padrão do Python e JavaScript local. Ele apresenta quatro páginas internas: operação (configuração, métricas, alertas e eventos), pipeline (etapas do processamento), componentes (detalhes e melhorias de cada módulo) e versões (histórico das entregas). A interface escuta somente no loopback por padrão; não deve ser exposta à rede sem autenticação e revisão de segurança.
 
 ## Validação desta revisão
 
@@ -72,7 +72,7 @@ Disponível em `http://127.0.0.1:8000`. O painel utiliza somente a biblioteca pa
 | --- | --- |
 | Compilação de `src/` e `tests/` | Aprovada (`compileall`) |
 | Leitura de `pyproject.toml` | Válida (`tomllib`) |
-| Testes unitários | **6 passed** |
+| Testes unitários | **8 passed** |
 | Pipeline CLI com banco temporário | 4 eventos, 1 alerta `AUTH-001` |
 | Renderização do painel | Aprovada; página contém resumo e alerta esperado |
 | Espaços em branco/diff | Aprovado (`git diff --check`) |
@@ -89,7 +89,7 @@ Estas são limitações reais do estado atual, em ordem aproximada de impacto.
 4. **Fuso horário presumido como UTC.** O formato syslog não traz timezone, mas o parser o fixa em UTC. Isso pode deslocar horários reais.
 5. **Conexões SQLite não são fechadas explicitamente.** O contexto confirma/reverte transações, porém o repositório deve gerenciar o fechamento da conexão de modo explícito.
 6. **Validação de domínio incompleta.** `fields` continua mutável apesar do `frozen=True`; `Any` pode conter valores não serializáveis em JSON; `Alert` não valida severidade nem `created_at` com timezone.
-7. **Cobertura de testes limitada.** Não há testes para SQLite, CLI, painel, autenticação aceita, parâmetros inválidos, múltiplos IPs, duas janelas de um IP ou reprocessamento.
+7. **Cobertura de testes ainda limitada.** O painel já possui testes de renderização e escape de HTML, mas ainda faltam testes para SQLite, CLI, requisições HTTP, autenticação aceita, parâmetros inválidos, múltiplos IPs, duas janelas de um IP ou reprocessamento.
 8. **Escopo de parsing pequeno.** Só reconhece duas mensagens em inglês de `sshd`; IPs não são validados e a informação `invalid user` não é preservada.
 9. **Painel é demonstrativo.** Não há autenticação, usuários, CSRF, uploads, gráficos históricos, filtros, paginação ou persistência de alertas. Ele deve continuar local até haver um modelo de segurança apropriado.
 

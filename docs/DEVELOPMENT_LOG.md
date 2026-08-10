@@ -123,6 +123,14 @@ Abra `http://127.0.0.1:8000`, clique em **Processar log** e confirme que as mét
 
 O painel foi redesenhado com linguagem visual de console SOC: superfícies grafite, hierarquia discreta, uma única ação de análise, indicadores de eventos, distribuição de falhas e acessos, postura de risco, alertas e tabela operacional. A validação confirmou que a página continua renderizando os dados e o alerta esperado.
 
+### Console técnico navegável
+
+O painel passou a ter páginas internas responsivas de operação, fluxo do pipeline, componentes técnicos e versões. A página de componentes explica a responsabilidade, comportamento e melhoria pendente de cada módulo; a de versões exibe as entregas `0.1.0` e `1.0.1`. A navegação e busca de componentes usam JavaScript local, sem bibliotecas ou chamadas externas.
+
+## 2026-08-10 — README de portfólio
+
+O README foi reorganizado para apresentação no GitHub: visão geral, recursos, arquitetura, execução, validação, segurança, roadmap e autoria. A referência a screenshots foi preparada para o diretório `docs/assets/`; nenhuma imagem versionada estava disponível no workspace durante esta revisão, portanto não foram adicionados links quebrados.
+
 ## 2026-08-10 — Auditoria de estado
 
 Foi criado [PROJECT_STATUS.md](PROJECT_STATUS.md), com o inventário dos arquivos, arquitetura, resultados de validação, riscos conhecidos e roadmap priorizado. A auditoria validou compilação, configuração do pacote, testes unitários, CLI, persistência temporária e renderização do painel.
