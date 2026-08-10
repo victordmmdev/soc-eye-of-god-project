@@ -26,6 +26,8 @@ Além da linha de comando, o projeto oferece um console web local para explorar 
 
 ## Recursos
 <img width="1911" height="1073" alt="Captura de tela de 2026-08-10 07-20-23" src="https://github.com/user-attachments/assets/8b2c7cff-f091-4b62-a3a2-df074b11121e" />
+
+
 - Leitura lazy de arquivos de log Linux, linha por linha.
 - Parser para mensagens `sshd` de falha de senha e autenticação aceita.
 - Modelo tipado de evento e alerta com horário obrigatório e fuso horário.
