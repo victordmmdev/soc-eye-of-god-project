@@ -2,7 +2,9 @@
 
 Mini-SIEM educacional: o primeiro vertical slice de um SIEM próprio, construído para aprendizado. Ele lê logs de autenticação Linux, normaliza eventos SSH, persiste-os em SQLite e identifica múltiplas falhas de autenticação pelo mesmo IP.
 
-O histórico de decisões, ferramentas, validações e próximos incrementos está em [docs/DEVELOPMENT_LOG.md](docs/DEVELOPMENT_LOG.md).
+**Versão atual:** `1.0.1` (hotfix: painel local e documentação de estado).
+
+O histórico de decisões, ferramentas, validações e próximos incrementos está em [docs/DEVELOPMENT_LOG.md](docs/DEVELOPMENT_LOG.md). Para arquitetura, inventário, riscos e roadmap, consulte [docs/PROJECT_STATUS.md](docs/PROJECT_STATUS.md).
 
 ## Pré-requisitos
 
@@ -25,6 +27,18 @@ Após instalar o projeto em um ambiente virtual, o mesmo fluxo pode ser executad
 ```bash
 minisiem data/samples/auth.log --year 2026
 ```
+
+## Painel visual local
+
+O painel usa os componentes já existentes (leitor, parser, SQLite e regra `AUTH-001`) e não adiciona dependências de runtime:
+
+```bash
+PYTHONPATH=src python -m minisiem.web
+```
+
+Abra [http://127.0.0.1:8000](http://127.0.0.1:8000). Se o pacote estiver instalado, use `minisiem-web`.
+
+O painel fica restrito ao computador local, permite processar o log de exemplo e mostra métricas, alertas e os 20 eventos mais recentes armazenados.
 
 ## Executar testes
 
