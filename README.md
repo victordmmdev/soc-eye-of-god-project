@@ -4,6 +4,8 @@ Mini-SIEM educacional: o primeiro vertical slice de um SIEM próprio, construíd
 
 O histórico de decisões, ferramentas, validações e próximos incrementos está em [docs/DEVELOPMENT_LOG.md](docs/DEVELOPMENT_LOG.md).
 <img width="1911" height="1073" alt="Captura de tela de 2026-08-10 07-03-01" src="https://github.com/user-attachments/assets/a75ca3fc-9622-42d9-8126-ce96f023ae14" />
+<img width="1911" height="1073" alt="Captura de tela de 2026-08-10 07-20-23" src="https://github.com/user-attachments/assets/fd957e90-a475-45f6-b842-5da2117fa2f0" />
+<img width="1911" height="1073" alt="Captura de tela de 2026-08-10 07-20-23" src="https://github.com/user-attachments/assets/ba9f537f-dc0d-45d2-92b1-8b5111e5d0e9" />
 
 ## Pré-requisitos
 
