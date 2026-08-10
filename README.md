@@ -1,8 +1,9 @@
-# SOC Eye of GOD - Project
+<img width="1911" height="1073" alt="image" src="https://github.com/user-attachments/assets/661da518-fecb-4ee8-9d69-f7c750968fc8" /># SOC Eye of GOD - Project
 
 Mini-SIEM educacional: o primeiro vertical slice de um SIEM próprio, construído para aprendizado. Ele lê logs de autenticação Linux, normaliza eventos SSH, persiste-os em SQLite e identifica múltiplas falhas de autenticação pelo mesmo IP.
 
 O histórico de decisões, ferramentas, validações e próximos incrementos está em [docs/DEVELOPMENT_LOG.md](docs/DEVELOPMENT_LOG.md).
+<img width="1911" height="1073" alt="Captura de tela de 2026-08-10 07-03-01" src="https://github.com/user-attachments/assets/a75ca3fc-9622-42d9-8126-ce96f023ae14" />
 
 ## Pré-requisitos
 
