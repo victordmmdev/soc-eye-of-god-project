@@ -1,0 +1,16 @@
+# Python bytecode and test caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local environments
+.venv/
+venv/
+
+# Runtime data produced by the Mini-SIEM
+data/runtime/
+
+# Local tooling
+.coverage
+htmlcov/
+.DS_Store
