@@ -25,7 +25,7 @@ SOC Eye of GOD é um projeto de estudo que reproduz, em escala reduzida, um flux
 Além da linha de comando, o projeto oferece um console web local para explorar a operação, a arquitetura, os componentes implementados e o histórico de versões. O objetivo é tornar as decisões técnicas visíveis e evoluir o projeto de forma incremental e documentada.
 
 ## Recursos
-
+<img width="1911" height="1073" alt="Captura de tela de 2026-08-10 07-20-23" src="https://github.com/user-attachments/assets/8b2c7cff-f091-4b62-a3a2-df074b11121e" />
 - Leitura lazy de arquivos de log Linux, linha por linha.
 - Parser para mensagens `sshd` de falha de senha e autenticação aceita.
 - Modelo tipado de evento e alerta com horário obrigatório e fuso horário.
@@ -141,7 +141,7 @@ minisiem-web
 ```
 
 O estado atual possui **8 testes automatizados** cobrindo contratos de evento, parser, regra de detecção e renderização/escape do painel. A validação funcional do exemplo confirma **4 eventos normalizados** e **1 alerta AUTH-001**.
-<img width="1911" height="1073" alt="Captura de tela de 2026-08-10 07-20-23" src="https://github.com/user-attachments/assets/8b2c7cff-f091-4b62-a3a2-df074b11121e" />
+
 
 ## Segurança e escopo
 
