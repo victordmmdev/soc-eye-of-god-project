@@ -15,7 +15,6 @@
   <a href="#roadmap">Roadmap</a>
 </p>
 
-<img width="1911" height="1073" alt="Captura de tela de 2026-08-10 07-03-01" src="https://github.com/user-attachments/assets/77785ac6-4a42-473b-93a4-d2d99e49432d" />
 
 > **Versão atual:** `1.0.1` · **Status:** laboratório educacional / portfólio · **Licença:** ainda não definida
 
