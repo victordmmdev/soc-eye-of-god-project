@@ -41,14 +41,16 @@ class SQLiteEventRepository:
                 self._event_row(event),
             )
 
-    def add_many(self, events: Iterable[Event]) -> None:
+    def add_many(self, events: Iterable[Event]) -> int:
         with self._connect() as connection:
+            before = connection.total_changes
             connection.executemany(
                 """INSERT OR IGNORE INTO events
                 (id, timestamp, source, host, event_type, raw_message, fields_json)
                 VALUES (?, ?, ?, ?, ?, ?, ?)""",
                 (self._event_row(event) for event in events),
             )
+            return connection.total_changes - before
 
     def list_all(self) -> list[Event]:
         with self._connect() as connection:

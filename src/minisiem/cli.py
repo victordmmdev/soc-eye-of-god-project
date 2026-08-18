@@ -29,14 +29,15 @@ def main() -> None:
 
     repository = SQLiteEventRepository(args.database)
     repository.initialize()
-    repository.add_many(events)
+    inserted = repository.add_many(events)
 
     rule = MultipleFailedAuthenticationRule(
         threshold=args.threshold,
         window=timedelta(minutes=args.window_minutes),
     )
     alerts = rule.evaluate(events)
-    print(f"Eventos normalizados e armazenados: {len(events)}")
+    print(f"Eventos normalizados: {len(events)}")
+    print(f"Novos eventos armazenados: {inserted}")
     print(f"Alertas gerados: {len(alerts)}")
     for alert in alerts:
         print(f"[{alert.severity.upper()}] {alert.rule_id}: {alert.title} ({alert.context['source_ip']})")

@@ -3,7 +3,7 @@
 from dataclasses import dataclass, field
 from datetime import datetime
 from typing import Any
-from uuid import uuid4
+from hashlib import sha256
 
 
 @dataclass(frozen=True, slots=True)
@@ -16,7 +16,7 @@ class Event:
     event_type: str
     raw_message: str
     fields: dict[str, Any] = field(default_factory=dict)
-    id: str = field(default_factory=lambda: str(uuid4()))
+    id: str = ""
 
     def __post_init__(self) -> None:
         for name in ("source", "host", "event_type", "raw_message"):
@@ -25,3 +25,15 @@ class Event:
 
         if self.timestamp.tzinfo is None or self.timestamp.utcoffset() is None:
             raise ValueError("timestamp deve incluir fuso horário")
+
+        if not self.id:
+            identity = "\x1f".join(
+                (
+                    self.timestamp.isoformat(),
+                    self.source,
+                    self.host,
+                    self.event_type,
+                    self.raw_message,
+                )
+            )
+            object.__setattr__(self, "id", sha256(identity.encode("utf-8")).hexdigest())
